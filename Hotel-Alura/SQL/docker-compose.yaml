@@ -1,0 +1,17 @@
+version: '3.1'
+
+services:
+  db:
+    image: mysql
+    container_name: docker-msql
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_DATABASE: hotel-alura 
+      MYSQL_USER: vega
+      MYSQL_PASSWORD: 12345
+      MYSQL_ROOT_PASSWORD: 12345
+    volumes:
+      - /home/cristian/eclipse-workspace/HotelJava/SQL/mysql:/var/lib/mysql
+    ports:
+      - "8080:3306"
+
